@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root{
+    --background: linear-gradient(0deg, #003355bb, #00bbbb88);
+    --primary: #003355;
+    --secondary: #00bbbb;
+    --padding: 80px 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding);
+}
+
+.subtitle{
+    margin-bottom: 35px;
+
+    color: var(--primary);
+    font-size: 2em;
+}
+
+.header{
+    --padding: 0;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    background-image: var(--background), url("../img/fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: #eee;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.nav__flex{
+    height: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__title{
+    text-shadow: 2px 0 5px #ccc;
+    color: var(--primary);
+}
+
+.nav__list{
+    list-style: none;
+}
+
+.nav__item{
+    display: inline-block;
+}
+
+.nav__enlace{
+    display: inline-block;
+
+    padding: 20px;
+    margin-right: 10px;
+
+    color: var(--primary);
+    font-weight: 500;
+
+    transition: all 300ms;
+}
+
+.nav__enlace:hover{
+    transform: scale(1.2);
+}
+
+.nav__enlace:active{
+    transform: scale(1);
+}
+
+.header__flex{
+    height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+}
+
+.header__texts{
+    color: white;
+}
+
+.header__title{
+    margin-bottom: 10px;
+
+    font-size: 3.2em;
+}
+
+.header__subtitle{
+    margin-bottom: 50px;
+
+    font-size: 2.2em;
+    font-weight: 400;
+}
+
+.header__cta{
+    display: inline-block;
+
+    padding: 20px 40px;
+    background-color: var(--secondary);
+    border-radius: 40px;
+
+    color: white;
+    font-weight: 500;
+
+    transition: all 250ms;
+}
+
+.header__cta:hover{
+    background: #aaa;
+    color: var(--primary);
+}
+
+.header__cta:active{
+    box-shadow: 0 0 8px black inset;
+}
+
+.about{
+    text-align: center;
+}
+
+.about__picture{
+    height: 130px;
+    width: 130px;
+
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.about__img{
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: top;
+}
+
+.about__text{
+    width: 75%;
+
+    margin: 0 auto;
+
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.skills__grid{
+    min-height: 350px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    row-gap: 20px;
+}
+
+.skills__texts{
+    width: 90%;
+}
+
+.skills__text{
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.skills__picture{
+    height: 200px;
+    width: 200px;
+}
+
+.skills__img{
+    height: 100%;
+    width: 100%;
+}
+
+.projects{
+    text-align: center;
+    
+    background-color: #eee;
+
+    position: relative;
+
+}
+
+.projects__grid{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer::before{
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+    height: 100px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background-color: #eee;
+
+    content: "";
+}
+
+.footer{
+    position: relative;
+
+    --padding: 160px 0 50px;
+    min-height: 400px;
+
+    background-color: #0066ac;
+    color: white;
+}
+
+.footer__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer__subtitle{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.footer__text{
+    font-size: 1.5em;
+}
+
+.footer__redes{
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__icon{
+    width: 60px;
+    margin: 10px;
+    padding: 10px;
+
+    font-size: 30px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    transition: all 300ms;
+}
+
+.footer__icon:hover{
+    cursor: pointer;
+    background: white;
+    color: #0066ac;
+}
+
+.icon{
+    padding: 5px;
+}
+
+.footer__picture{
+    height: 300px;
+    width: 300px;
+}
+
+.footer__img{
+    height: 100%;
+    width: 100%;
+}
+
+.copy{
+    text-align: center;
+    padding: 20px;
+
+    border-top: 2px solid white;
+}
